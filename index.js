@@ -9,8 +9,7 @@ input.addEventListener('keyup', () => {
         if(p.includes(input.value)){
             document.getElementById(p).classList.add('visible')
             document.getElementById(p).classList.add('innerSec')
-            //console.log(`Coincidencia(s): ${p}`)
-            // remove .invisible
+
         } else if (!p.includes(input.value)){
             document.getElementById(p).setAttribute('class','invisible')
         }
@@ -20,7 +19,7 @@ input.addEventListener('keyup', () => {
 
 
 async function gifReq () {
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 99; i++) {
         const res = await fetch(API);
         const data = await res.json();
         const newData = [data];

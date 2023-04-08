@@ -4,6 +4,7 @@
 
 body{
     padding: 16px;
+    margin: 30px;
 }
 
 .invisible{
@@ -25,6 +26,17 @@ body{
     justify-content: center;
 }
 
+#credits{
+    color: white;
+    font-size: 12px;
+}
+
+#me{
+    color: gold;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium'
+}
+
 #search{
     margin: 8px;
     width: 300px;
@@ -33,20 +45,6 @@ body{
     color: purple;
     background-color: gold;
     border: 3px solid purple;
-    border-radius: 8px;
-}
-
-#go{
-    cursor: pointer;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    margin: 4px;
-    width: 50px;
-    height: 20px;
-    font-size: 40px;
-    color: purple;
-    background-color: black;
     border-radius: 8px;
 }
 
@@ -69,4 +67,18 @@ body{
 .nameTitle{
     color: white;
     font-size: 12px;
+}
+
+@media (max-width:800px){
+    #gifSection{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:600px){
+    #gifSection{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
