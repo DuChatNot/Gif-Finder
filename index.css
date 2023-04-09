@@ -15,18 +15,32 @@ body{
     display: block;
 }
 
-#interact{
-    display: flex;
-
-}
-
 #gifSection{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
+    margin-top: 55px;
+}
+
+.sticky{
+    display: flex;
+    position: sticky;
+    top: 12px;
+    width: 500px;
+    height: 35px;
+}
+
+#DCN{
+    border-radius: 16px;
+    width: 70px;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
 }
 
 #credits{
+    display: grid;
+    grid-row: 1fr 1fr;
     color: white;
     font-size: 12px;
 }
@@ -39,8 +53,9 @@ body{
 
 #search{
     margin: 8px;
-    width: 300px;
-    height: 30px;
+    width: 500px;
+    height: 35px;
+    padding: 4px;
     font-size: 20px;
     color: purple;
     background-color: gold;

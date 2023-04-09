@@ -19,7 +19,7 @@ input.addEventListener('keyup', () => {
 
 
 async function gifReq () {
-    for (let i = 0; i < 99; i++) {
+    for (let i = 0; i < 30; i++) {
         const res = await fetch(API);
         const data = await res.json();
         const newData = [data];
@@ -27,11 +27,11 @@ async function gifReq () {
             newData.map(p => {
             const sec = document.createElement('section')
             sec.setAttribute('class','innerSec')
-            sec.setAttribute('id', `${p.data.username} ${i}`)
+            sec.setAttribute('id', `${p.data.slug.slice(0,10).toLowerCase()} ${i}`)
 
             const h1 = document.createElement('h1')
             h1.setAttribute('class','nameTitle')
-            h1.innerText = `${p.data.username} ${i}`;
+            h1.innerText = `${p.data.slug.slice(0,10).toLowerCase()} ${i}`;
 
             const gif = document.createElement('iframe');
             gif.setAttribute('class','gifFrames')
@@ -46,6 +46,7 @@ async function gifReq () {
     }
 }
 gifReq();
+
 
 
 
@@ -85,4 +86,13 @@ console.log(r)
                 url: p.data.embed_url
             }
             console.log(inf);
+
+
+function f (a){
+    const b = a.toLowerCase()
+    console.log(b)
+}
+
+f('FFFFFFFF')
+
 */
